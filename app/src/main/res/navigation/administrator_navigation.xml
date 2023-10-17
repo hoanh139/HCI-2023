@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/administrator_navigation"
+    app:startDestination="@id/administrator_navigation_dashboard">
+
+    <activity
+        android:id="@+id/administrator_navigation_home"
+        android:name="com.example.krankenhaus.ui.loginscreen.LogInScreenActivity"
+        android:label="activity_log_in_screen"
+        tools:layout="@layout/activity_log_in_screen" />
+
+    <fragment
+        android:id="@+id/administrator_navigation_dashboard"
+        android:name="com.example.krankenhaus.ui.administrator.ui.main.AdminDashboardFragment"
+        android:label="fragment_administrator_dashboard"
+        tools:layout="@layout/fragment_administrator_dashboard" >
+        <action
+            android:id="@+id/action_administrator_navigation_dashboard_to_adminPatientListFragment"
+            app:destination="@id/adminPatientListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/administrator_navigation_notifications"
+        android:name="com.example.krankenhaus.ui.administrator.ui.main.AdminNotificationsFragment"
+        android:label="fragment_administator_notifications"
+        tools:layout="@layout/fragment_administrator_notifications" />
+    <fragment
+        android:id="@+id/adminPatientListFragment"
+        android:name="com.example.krankenhaus.ui.administrator.ui.main.AdminPatientListFragment"
+        android:label="admin_fragment_patient_list"
+        tools:layout="@layout/admin_fragment_patient_list" >
+        <action
+            android:id="@+id/action_adminPatientListFragment_to_addPatientFragment"
+            app:destination="@id/addPatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bedListFragment"
+        android:name="com.example.krankenhaus.ui.administrator.ui.main.AdminBedListFragment"
+        android:label="fragment_bed_list"
+        tools:layout="@layout/fragment_bed_list" />
+    <fragment
+        android:id="@+id/addPatientFragment"
+        android:name="com.example.krankenhaus.ui.administrator.ui.main.AdminAddPatientFragment"
+        android:label="fragment_add_patient"
+        tools:layout="@layout/fragment_add_patient" />
+
+</navigation>

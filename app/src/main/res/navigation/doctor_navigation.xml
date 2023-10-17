@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doctor_navigation"
+    app:startDestination="@id/doctor_navigation_dashboard">
+
+    <activity
+        android:id="@+id/doctor_navigation_home"
+        android:name="com.example.krankenhaus.ui.loginscreen.LogInScreenActivity"
+        android:label="activity_log_in_screen"
+        tools:layout="@layout/activity_log_in_screen" />
+
+    <fragment
+        android:id="@+id/doctor_navigation_dashboard"
+        android:name="com.example.krankenhaus.ui.doctor.ui.main.DoctorDashboardFragment"
+        android:label="fragment_doctor_dashboard"
+        tools:layout="@layout/fragment_doctor_dashboard" >
+        <action
+            android:id="@+id/action_doctor_navigation_dashboard_to_visitListFragment"
+            app:destination="@id/visitListFragment" />
+        <action
+            android:id="@+id/action_doctor_navigation_dashboard_to_patientListFragment"
+            app:destination="@id/doctorPatientListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctor_navigation_notifications"
+        android:name="com.example.krankenhaus.ui.doctor.ui.main.DoctorNotificationsFragment"
+        android:label="fragment_doctor_notifications"
+        tools:layout="@layout/fragment_doctor_notifications" />
+    <fragment
+        android:id="@+id/visitListFragment"
+        android:name="com.example.krankenhaus.ui.doctor.ui.main.VisitListFragment"
+        android:label="fragment_visit_list"
+        tools:layout="@layout/fragment_visit_list" >
+        <action
+            android:id="@+id/action_visitListFragment_to_addVisitFragment"
+            app:destination="@id/addVisitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorPatientListFragment"
+        android:name="com.example.krankenhaus.ui.doctor.ui.main.DoctorPatientListFragment"
+        android:label="fragment_patient_list"
+        tools:layout="@layout/doctor_fragment_patient_list" />
+    <fragment
+        android:id="@+id/addVisitFragment"
+        android:name="com.example.krankenhaus.ui.doctor.ui.main.AddVisitFragment"
+        android:label="fragment_add_visit"
+        tools:layout="@layout/fragment_add_visit" />
+
+</navigation>

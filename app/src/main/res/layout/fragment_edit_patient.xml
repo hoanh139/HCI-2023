@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.administrator.ui.main.AdminEditPatientFragment"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:paddingBottom="10dp">
+">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/admin_edit_patient_info_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bed Number"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/admin_edit_patient_info_bednumber"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Insurance Number"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/admin_edit_patient_info_insurancenumber"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Date of Birth (year/month/date)"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <NumberPicker
+                android:id="@+id/admin_edit_patient_info_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <NumberPicker
+                android:id="@+id/admin_edit_patient_info_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <NumberPicker
+                android:id="@+id/admin_edit_patient_info_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_line"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/admin_edit_patient_info_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zipcode"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/admin_edit_patient_info_zipcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Place of Residence"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/admin_edit_patient_info_placeofresidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insurance Company"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/admin_edit_patient_info_insurancecompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:weightSum="4"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/edit_patient_info_save_info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/edit_patient_info_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="Cancel" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
